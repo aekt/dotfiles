@@ -27,6 +27,6 @@ set softtabstop=2
 " Style
 syntax enable
 set background=dark
-" colorscheme solarized
+
 " Airline
 let g:airline_powerline_fonts=1
