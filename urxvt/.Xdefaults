@@ -5,8 +5,8 @@ URxvt*skipScroll: true
 
 # Transparency
 
-URxvt*transparent: true
-URxvt*shading: 15
+URxvt*depth: 32
+URxvt*background: rgba:0000/0000/0200/c800
 URxvt*fading: 15
 
 # Key binding
@@ -21,7 +21,6 @@ URxvt*font: xft:Hack:size=9, xft:Noto Sans Mono CJK TC:size=9
 # Color scheme
 
 URxvt*foreground: white
-URxvt*background: black
 
 *color0:  #2E3436
 *color1:  #a40000
