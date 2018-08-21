@@ -4,6 +4,7 @@ set textwidth=72
 
 " Display
 set number
+set relativenumber
 set wildmenu
 
 " Behavior
