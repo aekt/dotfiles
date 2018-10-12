@@ -1,10 +1,9 @@
 " Format
 set encoding=utf-8
-set textwidth=72
+filetype indent plugin on
 
 " Display
 set number
-set relativenumber
 set wildmenu
 
 " Behavior
