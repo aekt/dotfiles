@@ -1,0 +1,46 @@
+" Format
+filetype indent plugin on
+set encoding=utf-8
+syntax enable
+
+" Display
+set number
+set wildmenu
+
+" Behavior
+set autoread
+set lazyredraw
+set mouse=a
+set updatetime=200
+set visualbell
+
+" Search
+set nohlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Indentation
+set autoindent
+set backspace=indent,eol,start
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+
+" Fuzzy finder
+set rtp+=~/.fzf
+
+" Plugin
+call plug#begin()
+Plug 'vim-airline/vim-airline'
+Plug 'altercation/vim-colors-solarized'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/fzf.vim'
+Plug 'w0rp/ale'
+Plug 'ajh17/vimcompletesme'
+call plug#end()
+
+" Plugin config
+colorscheme solarized
