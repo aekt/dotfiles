@@ -1,14 +1,23 @@
 # dotfiles
 
-## Install
+## Manual
 
-Clone this repo and submodules by `git clone --recursive
-https://github.com/aekt/dotfiles.git` and link the configuration files
-like this: `cd dotfiles; stow urxvt vim zsh`.
+0. Clone this repo and submodules
+```
+git clone --recursive git@gitlab.com:aekt/dotfiles.git ~/.dotfiles/
+``` 
 
-## Uninstall
+1. Link configuration files
+```
+cd ~/.dotfiles
+stow urxvt vim zsh foo
+```
 
-Just `stow -D foobar` if you want to remove links in directory `foobar`.
+2. Unlink configuration files
+```
+cd ~/.dotfiles
+stow -D bar
+```
 
 ## Reference
 
