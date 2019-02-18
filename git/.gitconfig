@@ -1,5 +1,10 @@
 [user]
-	email = yusan-23@hotmail.com
-	name = aekt
+  email = yusan-23@hotmail.com
+  name = aekt
+
 [core]
-	editor = vim
+  editor = vim
+  excludesfile = ~/.gitignore_global
+
+[alias]
+  hist = log --all --graph --oneline
