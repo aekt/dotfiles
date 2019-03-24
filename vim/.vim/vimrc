@@ -34,7 +34,6 @@ set rtp+=~/.fzf
 let g:netrw_dirhistmax = 0
 call plug#begin()
 Plug 'vim-airline/vim-airline'
-Plug 'altercation/vim-colors-solarized'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -42,9 +41,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'ajh17/vimcompletesme'
 call plug#end()
-
-" Plugin config
-colorscheme solarized
 
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
