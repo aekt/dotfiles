@@ -42,6 +42,10 @@ Plug 'w0rp/ale'
 Plug 'ajh17/vimcompletesme'
 call plug#end()
 
+" Colorscheme
+set background=dark
+
+" Lint
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   'typescript': ['prettier'],
