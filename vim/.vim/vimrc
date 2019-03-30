@@ -51,5 +51,6 @@ let g:ale_fixers = {
 \   'typescript': ['prettier'],
 \   'javascript': ['prettier'],
 \   'css': ['prettier'],
+\   'scss': ['prettier'],
 \}
 let g:ale_lint_on_enter = 0
