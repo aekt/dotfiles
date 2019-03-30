@@ -33,14 +33,14 @@ set rtp+=~/.fzf
 " Plugin
 let g:netrw_dirhistmax = 0
 call plug#begin()
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+Plug 'ajh17/vimcompletesme'
+Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-Plug 'junegunn/fzf.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
-Plug 'ajh17/vimcompletesme'
 call plug#end()
 
 " Style
