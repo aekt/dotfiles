@@ -34,6 +34,7 @@ set rtp+=~/.fzf
 let g:netrw_dirhistmax = 0
 call plug#begin()
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -42,8 +43,9 @@ Plug 'w0rp/ale'
 Plug 'ajh17/vimcompletesme'
 call plug#end()
 
-" Colorscheme
+" Style
 set background=dark
+let g:airline_theme='monochrome'
 
 " Lint
 let g:ale_fix_on_save = 1
