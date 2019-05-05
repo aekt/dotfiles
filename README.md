@@ -4,7 +4,7 @@
 
 0. Clone this repo and submodules
 ```
-git clone --recursive --shallow-submodules git@gitlab.com:aekt/dotfiles.git ~/.dotfiles
+git clone git@gitlab.com:aekt/dotfiles.git ~/.dotfiles
 ```
 
 1. Link configuration files
