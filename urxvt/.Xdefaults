@@ -1,0 +1,52 @@
+*internalBorder: 10
+*scrollBar: false
+
+URxvt*font: xft:Fira Code:pixelsize=12
+
+! Modified from theme `primary`:
+! https://github.com/mbadolato/iTerm2-Color-Schemes
+
+!
+! Generated with :
+! XRDB2Xreources.py
+!
+*.foreground:  #ffffff
+*.background:  #000000
+*.cursorColor: #ffffff
+!
+! Black
+*.color0:      #000000
+*.color8:      #000000
+!
+! Red
+*.color1:      #db4437
+*.color9:      #db4437
+!
+! Green
+*.color2:      #0f9d58
+*.color10:     #0f9d58
+!
+! Yellow
+*.color3:      #f4b400
+*.color11:     #f4b400
+!
+! Blue
+*.color4:      #4285f4
+*.color12:     #4285f4
+!
+! Magenta
+*.color5:      #db4437
+*.color13:     #4285f4
+!
+! Cyan
+*.color6:      #4285f4
+*.color14:     #0f9d58
+!
+! White
+*.color7:      #ffffff
+*.color15:     #ffffff
+!
+! Bold, Italic, Underline
+*.colorBD:     #ffffff
+!*.colorIT:
+*.colorUL: #596181
