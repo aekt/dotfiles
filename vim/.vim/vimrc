@@ -49,6 +49,7 @@ Plug 'w0rp/ale'
 call plug#end()
 
 " Style
+set background=light
 let g:airline_theme='monochrome'
 
 " Lint
