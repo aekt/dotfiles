@@ -58,4 +58,3 @@ let g:ale_fixers = {
 \   'scss': ['prettier'],
 \   'python': ['autopep8'],
 \}
-let g:ale_lint_on_enter = 0
