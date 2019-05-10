@@ -43,7 +43,7 @@ URxvt*font: xft:Fira Code:pixelsize=12
 *.color14:     #0f9d58
 !
 ! White
-*.color7:      #ffffff
+*.color7:      #cccccc
 *.color15:     #ffffff
 !
 ! Bold, Italic, Underline
