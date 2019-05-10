@@ -210,15 +210,15 @@ bar {
 
     colors {
         statusline #ffffff
-        background #323232
-        focused_workspace #323232 #323232 #ffffff
-        inactive_workspace #323232 #323232 #5c5c5c
+        background #000000
+        focused_workspace #000000 #000000 #ffffff
+        inactive_workspace #000000 #000000 #5c5c5c
     }
 
     height 15
 }
 
-default_border pixel 2
+default_border none
 
 include /etc/sway/config.d/*
 
