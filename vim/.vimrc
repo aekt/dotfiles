@@ -39,7 +39,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
-Plug 'ajh17/vimcompletesme'
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
