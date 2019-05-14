@@ -1,4 +1,5 @@
 *internalBorder: 10
+*pointerBlank: true
 *scrollBar: false
 
 URxvt*font: xft:Fira Code:pixelsize=12
