@@ -51,10 +51,11 @@ set background=light
 " Lint
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-\   'markdown': ['prettier'],
-\   'typescript': ['prettier'],
-\   'javascript': ['prettier'],
+\   'cpp': ['clang-format'],
 \   'css': ['prettier'],
+\   'javascript': ['prettier'],
+\   'markdown': ['prettier'],
+\   'python': ['black'],
 \   'scss': ['prettier'],
-\   'python': ['autopep8'],
+\   'typescript': ['prettier'],
 \}
