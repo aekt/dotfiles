@@ -2,8 +2,8 @@
 *pointerBlank: true
 *scrollBar: false
 
-URxvt*font: xft:Fira Code:pixelsize=12 \
-          , xft:Noto Sans Mono CJK HK
+URxvt*font: xft:Fira Code:pixelsize=15 \
+          , xft:WenQuanYi Micro Hei Mono
 URxvt*inputMethod: ibus
 
 ! Modified from theme `primary`:
