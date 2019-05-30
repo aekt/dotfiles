@@ -60,3 +60,6 @@ let g:ale_fixers = {
 \   'sh': ['shfmt'],
 \   'typescript': ['prettier'],
 \}
+let g:ale_linters = {
+\   'python': ['pyls'],
+\}
