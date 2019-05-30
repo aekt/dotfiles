@@ -57,5 +57,6 @@ let g:ale_fixers = {
 \   'markdown': ['prettier'],
 \   'python': ['black'],
 \   'scss': ['prettier'],
+\   'sh': ['shfmt'],
 \   'typescript': ['prettier'],
 \}
