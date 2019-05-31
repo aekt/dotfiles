@@ -2,8 +2,8 @@
 *pointerBlank: true
 *scrollBar: false
 
-URxvt*font: xft:Fira Code:pixelsize=15 \
-          , xft:WenQuanYi Micro Hei Mono
+URxvt*font: xft:Fira Code Light:pixelsize=16 \
+          , xft:WenQuanYi Micro Hei Mono Light
 URxvt*inputMethod: ibus
 
 ! Modified from theme `primary`:
