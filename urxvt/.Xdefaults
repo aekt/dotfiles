@@ -46,7 +46,7 @@ URxvt*inputMethod: ibus
 *.color14:     #cdab53
 !
 ! White
-*.color7:      #b5b2b2
+*.color7:      #252222
 *.color15:     #f7f7f7
 !
 ! Bold, Italic, Underline
