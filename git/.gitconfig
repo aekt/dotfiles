@@ -9,5 +9,17 @@
 [alias]
   hist = log --all --graph --oneline
   amend = commit -a --amend
-  save = !git add -A && git commit -m 'SAVEPOINT'
+  save = ! git add -A && git commit -m 'SAVEPOINT'
   undo = reset HEAD~1 --mixed
+  bye-list = \
+    ! git branch -r \
+    | grep origin \
+    | grep -v master \
+    | sed 's/origin\\///g'
+  bye = \
+    ! git bye-list \
+    | xargs git push --dry-run --delete origin \
+    && echo 'Use `git byebye` to delete them.'
+  byebye = \
+    ! git bye-list \
+    | xargs git push --delete origin
