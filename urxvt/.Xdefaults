@@ -6,50 +6,39 @@ URxvt*font: xft:Fira Code Light:pixelsize=16 \
           , xft:WenQuanYi Micro Hei Mono Light
 URxvt*inputMethod: ibus
 
-! Modified from theme `3024 Night`:
-! https://github.com/mbadolato/iTerm2-Color-Schemes
+! special
+*.foreground:   #ffffff
+*.background:   #000000
+*.cursorColor:  #c5c8c6
 
-!
-! Generated with :
-! XRDB2Xreources.py
-!
-*.foreground:  #a5a2a2
-*.background:  #000000
-*.cursorColor: #a5a2a2
-!
-! Black
-*.color0:      #090300
-*.color8:      #5c5855
-!
-! Red
-*.color1:      #db2d20
-*.color9:      #e8bbd0
-!
-! Green
-*.color2:      #01a252
-*.color10:     #3a3432
-!
-! Yellow
-*.color3:      #fded02
-*.color11:     #4a4543
-!
-! Blue
-*.color4:      #01a0e4
-*.color12:     #807d7c
-!
-! Magenta
-*.color5:      #a16a94
-*.color13:     #d6d5d4
-!
-! Cyan
-*.color6:      #b5e4f4
-*.color14:     #cdab53
-!
-! White
-*.color7:      #252222
-*.color15:     #f7f7f7
-!
-! Bold, Italic, Underline
-*.colorBD:     #a5a2a2
-!*.colorIT:
-!*.colorUL:
+! black
+*.color0:       #1d1f21
+*.color8:       #969896
+
+! red
+*.color1:       #cc342b
+*.color9:       #cc342b
+
+! green
+*.color2:       #198844
+*.color10:      #198844
+
+! yellow
+*.color3:       #fba922
+*.color11:      #fba922
+
+! blue
+*.color4:       #3971ed
+*.color12:      #3971ed
+
+! magenta
+*.color5:       #a36ac7
+*.color13:      #a36ac7
+
+! cyan
+*.color6:       #3971ed
+*.color14:      #3971ed
+
+! white
+*.color7:       #c5c8c6
+*.color15:      #ffffff
