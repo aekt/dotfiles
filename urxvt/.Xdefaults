@@ -2,7 +2,7 @@
 *pointerBlank: true
 *scrollBar: false
 
-URxvt*font: xft:Fira Code Light:pixelsize=16 \
+URxvt*font: xft:Fira Code Light \
           , xft:WenQuanYi Micro Hei Mono Light
 URxvt*inputMethod: ibus
 
