@@ -9,7 +9,7 @@ URxvt*inputMethod: ibus
 ! special
 *.foreground:   #ffffff
 *.background:   #000000
-*.cursorColor:  #c5c8c6
+*.cursorColor:  #ff0000
 
 ! black
 *.color0:       #1d1f21
