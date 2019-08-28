@@ -1,20 +1,21 @@
 # dotfiles
 
-## Manual
+## Usage
 
-0. Clone this repo and submodules
-```
+Just clone this repository and use `stow`, for example:
+
+```bash
+# Clone this repo
+
 git clone git@gitlab.com:aekt/dotfiles.git ~/.dotfiles
-```
 
-1. Link configuration files
-```
+# Link configuration files
+
 cd ~/.dotfiles
 stow urxvt vim zsh foo
-```
 
-2. Unlink configuration files
-```
+# Unlink configuration files
+
 cd ~/.dotfiles
 stow -D bar
 ```
@@ -23,9 +24,9 @@ stow -D bar
 
 ### Dotfiles
 
-* https://dotfiles.github.io/
-* https://github.com/webpro/awesome-dotfiles
+- https://dotfiles.github.io/
+- https://github.com/webpro/awesome-dotfiles
 
 ### Stow
 
-* https://alexpearce.me/2016/02/managing-dotfiles-with-stow/
+- https://alexpearce.me/2016/02/managing-dotfiles-with-stow/
