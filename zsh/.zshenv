@@ -1,8 +1,5 @@
 autoload -Uz compinit && compinit
 
-# take notes
-alias note="vim -c 'r!date' -c 'normal i# ' -c 'normal 2o' -c 'normal O' ~/.notes.md"
-
 # allow mouse scroll in `less`
 export LESS="-r"
 
