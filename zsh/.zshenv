@@ -6,9 +6,6 @@ export LESS="-r"
 # use `fd` in `fzf`
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
 
-. ~/.asdf/asdf.sh
-. ~/.asdf/completions/asdf.bash
-
 # start SSH agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent > ~/.ssh/.ssh-agent-thing
