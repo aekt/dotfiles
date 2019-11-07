@@ -1,12 +1,3 @@
-" Format
-filetype indent plugin on
-set encoding=utf-8
-syntax enable
-
-" Display
-set number
-set wildmenu
-
 " Behavior
 set autoread
 set lazyredraw
@@ -14,11 +5,14 @@ set mouse=a
 set updatetime=200
 set visualbell
 
-" Search
-set nohlsearch
-set incsearch
-set ignorecase
-set smartcase
+" Display
+set number
+set wildmenu
+
+" Format
+filetype indent plugin on
+set encoding=utf-8
+syntax enable
 
 " Indentation
 set autoindent
@@ -26,6 +20,16 @@ set backspace=indent,eol,start
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+
+" Search
+set ignorecase
+set incsearch
+set nohlsearch
+set smartcase
+
+" Style
+set background=light
+set termguicolors
 
 " Fuzzy finder
 set rtp+=~/.fzf
@@ -45,10 +49,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 call plug#end()
-
-" Style
-set background=light
-set termguicolors
 
 " Lint
 let g:ale_fix_on_save = 1
