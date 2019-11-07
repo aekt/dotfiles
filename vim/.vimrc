@@ -48,6 +48,7 @@ call plug#end()
 
 " Style
 set background=light
+set termguicolors
 
 " Lint
 let g:ale_fix_on_save = 1
