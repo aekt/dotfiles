@@ -7,6 +7,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
+Plug 'chriskempson/base16-vim'
 Plug 'embear/vim-localvimrc'
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
@@ -44,8 +45,8 @@ set nohlsearch
 set smartcase
 
 " Style
-set background=light
 set termguicolors
+colorscheme base16-solarized-light
 
 " Fuzzy finder
 set rtp+=~/.fzf
