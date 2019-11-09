@@ -1,3 +1,19 @@
+" Plugin
+let g:netrw_dirhistmax = 0
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
+endif
+call plug#begin()
+Plug 'airblade/vim-gitgutter'
+Plug 'embear/vim-localvimrc'
+Plug 'junegunn/fzf.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-fugitive'
+Plug 'w0rp/ale'
+call plug#end()
+
 " Behavior
 set autoread
 set lazyredraw
@@ -33,22 +49,6 @@ set termguicolors
 
 " Fuzzy finder
 set rtp+=~/.fzf
-
-" Plugin
-let g:netrw_dirhistmax = 0
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
-endif
-call plug#begin()
-Plug 'airblade/vim-gitgutter'
-Plug 'embear/vim-localvimrc'
-Plug 'junegunn/fzf.vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-fugitive'
-Plug 'w0rp/ale'
-call plug#end()
 
 " Lint
 let g:ale_fix_on_save = 1
