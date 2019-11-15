@@ -66,8 +66,12 @@ let g:ale_fixers = {
 \   'scss': ['prettier'],
 \   'sh': ['shfmt'],
 \   'typescript': ['prettier'],
+\   'typescriptreact': ['prettier'],
 \}
 let g:ale_linters = {
 \   'dart': ['language_server'],
 \   'python': ['pyls'],
+\}
+let g:ale_linter_aliases = {
+\   'typescriptreact': 'typescript'
 \}
