@@ -48,6 +48,9 @@ set smartcase
 set termguicolors
 colorscheme base16-solarized-light
 
+" Key maps
+nnoremap <C-J> :ALEGoToDefinition<CR>
+
 " Fuzzy finder
 set rtp+=~/.fzf
 
