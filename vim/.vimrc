@@ -7,7 +7,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
-Plug 'chriskempson/base16-vim'
 Plug 'embear/vim-localvimrc'
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
@@ -43,10 +42,6 @@ set ignorecase
 set incsearch
 set nohlsearch
 set smartcase
-
-" Style
-set termguicolors
-colorscheme base16-solarized-light
 
 " Key maps
 nnoremap <C-J> :ALEGoToDefinition<CR>
