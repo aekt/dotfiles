@@ -9,13 +9,13 @@
 
 [alias]
   hist = log --all --graph --oneline
-  amend = commit -a --amend
-  save = ! git add -A && git commit -m 'SAVEPOINT'
+  amend = commit --all --amend
+  save = ! git add --all && git commit --message 'SAVEPOINT'
   undo = reset HEAD~1 --mixed
   bye-list = \
-    ! git branch -r \
+    ! git branch --remotes \
     | grep origin \
-    | grep -v master \
+    | grep --invert-match master \
     | sed 's/origin\\///g'
   bye = \
     ! git bye-list \
