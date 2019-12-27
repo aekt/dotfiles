@@ -74,7 +74,7 @@ let g:ale_fixers = {
 \}
 let g:ale_linters = {
 \   'dart': ['language_server'],
-\   'python': ['pyls'],
+\   'python': ['mypy', 'pyls'],
 \}
 let g:ale_linter_aliases = {
 \   'typescriptreact': 'typescript'
