@@ -60,6 +60,7 @@ set rtp+=~/.fzf
 " Lint
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
+\   'c': ['clang-format'],
 \   'cpp': ['clang-format'],
 \   'css': ['prettier'],
 \   'dart': ['dartfmt'],
