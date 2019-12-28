@@ -28,7 +28,7 @@ set number
 set wildmenu
 
 " Format
-filetype indent plugin on
+filetype plugin indent on
 set encoding=utf-8
 syntax enable
 
