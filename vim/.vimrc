@@ -60,7 +60,8 @@ nnoremap <C-J> :ALEGoToDefinition<CR>
 " Fuzzy finder
 set rtp+=~/.fzf
 
-" Lint
+" ALE
+set omnifunc=ale#completion#OmniFunc
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   'c': ['clang-format'],
