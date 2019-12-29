@@ -1,5 +1,8 @@
 autoload -Uz compinit && compinit
 
+# use Vi key binding
+bindkey -v
+
 # allow mouse scroll in `less`
 export LESS="-r"
 
