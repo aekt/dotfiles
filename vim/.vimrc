@@ -71,6 +71,7 @@ let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \   'markdown': ['prettier'],
 \   'python': ['black', 'isort'],
+\   'rust': ['rustfmt'],
 \   'scss': ['prettier'],
 \   'sh': ['shfmt'],
 \   'typescript': ['prettier'],
@@ -79,6 +80,7 @@ let g:ale_fixers = {
 let g:ale_linters = {
 \   'dart': ['language_server'],
 \   'python': ['mypy', 'pyls'],
+\   'rust': ['rls'],
 \}
 let g:ale_linter_aliases = {
 \   'typescriptreact': 'typescript'
