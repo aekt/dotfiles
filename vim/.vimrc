@@ -7,7 +7,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
-Plug 'brooth/far.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'embear/vim-localvimrc'
 Plug 'junegunn/fzf.vim'
