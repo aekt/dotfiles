@@ -69,6 +69,7 @@ let g:ale_fixers = {
 \   'dart': ['dartfmt'],
 \   'javascript': ['prettier'],
 \   'javascriptreact': ['prettier'],
+\   'json': ['prettier'],
 \   'markdown': ['prettier'],
 \   'python': ['black', 'isort'],
 \   'rust': ['rustfmt'],
