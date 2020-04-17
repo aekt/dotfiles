@@ -67,6 +67,7 @@ let g:ale_fixers = {
 \   'cpp': ['clang-format'],
 \   'css': ['prettier'],
 \   'dart': ['dartfmt'],
+\   'html': ['prettier'],
 \   'javascript': ['prettier'],
 \   'javascriptreact': ['prettier'],
 \   'json': ['prettier'],
