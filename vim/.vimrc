@@ -71,6 +71,7 @@ let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \   'javascriptreact': ['prettier'],
 \   'json': ['prettier'],
+\   'less': ['prettier'],
 \   'markdown': ['prettier'],
 \   'python': ['black', 'isort'],
 \   'rust': ['rustfmt'],
