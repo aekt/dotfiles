@@ -45,7 +45,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "termite"
@@ -210,9 +210,9 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
-            wibox.widget.systray(),
+            -- mykeyboardlayout,
             mytextclock,
+            wibox.widget.systray(),
             s.mylayoutbox,
         },
     }
@@ -561,4 +561,17 @@ end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+-- }}}
+
+-- {{{ Daemons
+autorun = true
+autorunCommands =
+{
+   "ibus-daemon -drx",
+}
+if autorun then
+   for i = 1, #autorunCommands do
+       awful.util.spawn(autorunCommands[i])
+   end
+end
 -- }}}
