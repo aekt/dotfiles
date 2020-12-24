@@ -6,6 +6,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
 endif
 call plug#begin()
+Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'chriskempson/base16-vim'
 Plug 'embear/vim-localvimrc'
@@ -91,3 +92,4 @@ let g:ale_linters = {
 let g:ale_linter_aliases = {
 \   'typescriptreact': 'typescript'
 \}
+let g:indentLine_defaultGroup = 'NonText'
