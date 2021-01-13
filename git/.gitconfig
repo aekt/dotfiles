@@ -15,6 +15,8 @@
   bye-list = \
     ! git branch --remotes \
     | grep origin \
+    | grep --invert-match HEAD \
+    | grep --invert-match main \
     | grep --invert-match master \
     | sed 's/origin\\///g'
   bye = \
