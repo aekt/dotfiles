@@ -84,6 +84,7 @@ let g:ale_fixers = {
 \}
 let g:ale_linters = {
 \   'dart': ['language_server'],
+\   'go': ['gopls'],
 \   'javascript': ['eslint', 'tsserver'],
 \   'javascriptreact': ['eslint', 'tsserver'],
 \   'python': ['mypy', 'pyls'],
