@@ -95,3 +95,4 @@ let g:ale_linter_aliases = {
 \   'typescriptreact': 'typescript'
 \}
 let g:indentLine_defaultGroup = 'NonText'
+let g:indentLine_enabled = 0
