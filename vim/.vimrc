@@ -52,6 +52,11 @@ set termguicolors
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
+  " Hotfix spell highlight: https://github.com/chriskempson/base16-vim/issues/182
+  call Base16hi("SpellBad",   "", "", g:base16_cterm08, g:base16_cterm00, "", "")
+  call Base16hi("SpellCap",   "", "", g:base16_cterm0A, g:base16_cterm00, "", "")
+  call Base16hi("SpellLocal", "", "", g:base16_cterm0D, g:base16_cterm00, "", "")
+  call Base16hi("SpellRare",  "", "", g:base16_cterm0B, g:base16_cterm00, "", "")
 endif
 
 " Key maps
