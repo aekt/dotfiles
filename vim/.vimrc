@@ -93,7 +93,7 @@ let g:ale_linters = {
 \   'go': ['gopls'],
 \   'javascript': ['eslint', 'tsserver'],
 \   'javascriptreact': ['eslint', 'tsserver'],
-\   'python': ['mypy', 'pyls'],
+\   'python': ['mypy', 'pylsp'],
 \   'rust': ['rls'],
 \}
 let g:ale_linter_aliases = {
