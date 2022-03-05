@@ -7,6 +7,9 @@
   excludesfile = ~/.gitignore_global
   ignorecase = false
 
+[init]
+  defaultBranch = main
+
 [alias]
   hist = log --all --graph --oneline
   amend = commit --all --amend
