@@ -1,9 +1,0 @@
-*background: #000000
-*foreground: #ffffff
-*internalBorder: 10
-*pointerBlank: true
-*scrollBar: false
-
-URxvt*font: xft:Fira Code Light \
-          , xft:WenQuanYi Micro Hei Mono Light
-URxvt*inputMethod: ibus
