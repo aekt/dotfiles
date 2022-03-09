@@ -1,0 +1,30 @@
+colorscheme plain
+
+add-highlighter global/ number-lines
+
+evaluate-commands %sh{
+    plugins="$kak_config/plugins"
+    mkdir -p "$plugins"
+    [ ! -e "$plugins/plug.kak" ] && \
+        git clone -q https://github.com/andreyorst/plug.kak.git "$plugins/plug.kak"
+    printf "%s\n" "source '$plugins/plug.kak/rc/plug.kak'"
+}
+plug "andreyorst/plug.kak" noload
+plug "andreyorst/fzf.kak" defer fzf-file %{
+    set-option global fzf_file_command 'fd --type f --hidden --follow --exclude .git'
+}
+plug "kak-lsp/kak-lsp" %{
+    set-option global lsp_config %{
+        [language.dart]
+        filetypes = ["dart"]
+        roots = ["pubspec.yaml", ".git", ".hg"]
+        command = ["dart analyze"]
+    }
+}
+plug "lePerdu/kakboard" %{
+    hook global WinCreate .* %{ kakboard-enable }
+}
+
+map global normal <c-p> ': fzf-mode<ret>'
+
+lsp-enable

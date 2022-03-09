@@ -1,0 +1,4 @@
+[language.dart]
+filetypes = ["dart"]
+roots = ["pubspec.yaml", ".git", ".hg"]
+command = "dart analyze"
