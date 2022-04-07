@@ -1,0 +1,6 @@
+.emacs.d/eln-cache/
+.emacs.d/elpa/
+.emacs.d/etc/
+.emacs.d/straight/
+.emacs.d/var/
+.emacs.d/recentf
