@@ -1,0 +1,11 @@
+{
+    "breadcrumbs.enabled": false,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "files.insertFinalNewline": true,
+    "telemetry.telemetryLevel": "off",
+    "workbench.activityBar.visible": false,
+    "workbench.startupEditor": "none",
+    "dart.lineLength": 120,
+    "ruby.useLanguageServer": true
+}
