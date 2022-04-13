@@ -9,11 +9,13 @@ call plug#begin()
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'chriskempson/base16-vim'
-Plug 'embear/vim-localvimrc'
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
 call plug#end()
 
 " Behavior
@@ -26,6 +28,7 @@ set visualbell
 " Display
 set number
 set wildmenu
+set regexpengine=2
 
 " Format
 filetype plugin indent on
@@ -46,9 +49,6 @@ set nohlsearch
 set smartcase
 
 " Style
-let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
-let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
-set termguicolors
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
@@ -60,7 +60,9 @@ if filereadable(expand("~/.vimrc_background"))
 endif
 
 " Key maps
-nnoremap <C-J> :ALEGoToDefinition<CR>
+nnoremap gb :Git blame<CR>
+nnoremap gd :LSClientGoToDefinition<CR>
+nnoremap <C-j> :ALEGoToDefinition<CR>
 
 " Fuzzy finder
 set rtp+=~/.fzf
@@ -72,7 +74,7 @@ let g:ale_fixers = {
 \   'c': ['clang-format'],
 \   'cpp': ['clang-format'],
 \   'css': ['prettier'],
-\   'dart': ['dartfmt'],
+\   'dart': ['dart-format'],
 \   'go': ['gofmt'],
 \   'html': ['prettier'],
 \   'javascript': ['prettier'],
@@ -81,7 +83,8 @@ let g:ale_fixers = {
 \   'kotlin': ['ktlint'],
 \   'less': ['prettier'],
 \   'markdown': ['prettier'],
-\   'python': ['black', 'isort'],
+\   'python': ['black'],
+\   'ruby': ['prettier'],
 \   'rust': ['rustfmt'],
 \   'scss': ['prettier'],
 \   'sh': ['shfmt'],
@@ -89,15 +92,20 @@ let g:ale_fixers = {
 \   'typescriptreact': ['prettier'],
 \}
 let g:ale_linters = {
-\   'dart': ['language_server'],
 \   'go': ['gopls'],
 \   'javascript': ['eslint', 'tsserver'],
 \   'javascriptreact': ['eslint', 'tsserver'],
-\   'python': ['mypy', 'pylsp'],
+\   'python': ['pyright'],
 \   'rust': ['rls'],
 \}
 let g:ale_linter_aliases = {
 \   'typescriptreact': 'typescript'
 \}
+let g:ale_dart_format_options = '--line-length=120'
+
+" indentLine
 let g:indentLine_defaultGroup = 'NonText'
 let g:indentLine_enabled = 0
+
+" LSC
+" let g:lsc_enable_autocomplete = v:false
