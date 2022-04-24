@@ -15,9 +15,11 @@
 (straight-use-package 'use-package)
 
 ;; standard
-(setq indent-tabs-mode nil)
+(setq completion-styles '(flex))
 (setq dired-listing-switches "-agho")
 (setq inhibit-startup-message t)
+(setq read-buffer-completion-ignore-case t)
+(setq read-file-name-completion-ignore-case t)
 (column-number-mode)
 (global-display-line-numbers-mode t)
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
@@ -38,23 +40,21 @@
   (exec-path-from-shell-initialize)
   :straight t)
 
-(use-package dired-single
-  :commands
-  (dired dired-jump)
-  :straight t)
-
 (use-package no-littering
   :config
   (require 'recentf)
   (add-to-list 'recentf-exclude no-littering-var-directory)
   (add-to-list 'recentf-exclude no-littering-etc-directory)
-  (setq auto-save-file-name-transforms
-	`((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
-  (setq backup-directory-alist
-	`((".*" . ,(no-littering-expand-var-file-name "backup/"))))
+  :straight t)
+
+(use-package dired-single
+  :defer 0
+  :commands
+  (dired dired-jump)
   :straight t)
 
 (use-package evil
+  :defer 0
   :init
   (setq evil-undo-system 'undo-redo)
   (setq evil-want-C-u-scroll t)
@@ -64,6 +64,8 @@
   :straight t)
 
 (use-package evil-collection
+  :after evil
+  :defer 0
   :config
   (evil-collection-init)
   (evil-collection-define-key 'normal 'dired-mode-map
@@ -71,117 +73,95 @@
     "l" 'dired-single-buffer)
   :straight t)
 
-(use-package lsp-mode
-  :init
-  (setq lsp-headerline-breadcrumb-enable nil)
-  ;; (setq lsp-keymap-prefix "C-c l")
-  :hook ((js-mode . lsp-deferred)
-	 (python-mode . lsp-deferred)
-	 (ruby-mode . lsp-deferred)
-	 (typescript-mode . lsp-deferred)
-	 (lsp-mode . lsp-enable-which-key-integration))
-  :commands
-  (lsp lsp-deferred)
+(use-package selectrum
+  :defer 0
+  :config
+  (selectrum-mode 1)
   :straight t)
 
-(use-package ivy
-  :init
-  (setq ivy-count-format "(%d/%d) ")
-  (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
-  (setq ivy-use-virtual-buffers t)
+(use-package prescient
+  :defer 0
   :config
-  (ivy-mode 1)
+  (add-to-list 'prescient-filter-method 'fuzzy)
   :straight t)
 
-(use-package counsel
+(use-package selectrum-prescient
+  :defer 0
   :config
-  (counsel-mode 1)
-  :custom
-  (counsel-rg-base-command ;; Modified from the original one to include hidden files
-   `("rg"
-     "--max-columns" "240"
-     "--with-filename"
-     "--no-heading"
-     "--line-number"
-     "--color" "never"
-     "--hidden"
-     "--glob" "!.git/*"
-     "%s"))
+  (selectrum-prescient-mode 1)
+  :straight t)
+
+(use-package company
+  :defer 0
+  :config
+  (global-company-mode)
+  :straight t)
+
+(use-package marginalia
+  :defer 0
+  :config
+  (marginalia-mode)
   :straight t)
 
 (use-package which-key
+  :defer 0
   :init
   (setq which-key-idle-delay 0.5)
   :config
   (which-key-mode 1)
   :straight t)
 
-(use-package projectile
-  :config
-  (projectile-mode 1)
-  :custom
-  (projectile-completion-system 'ivy)
-  :straight t)
-
-(use-package counsel-projectile
-  :config
-  (counsel-projectile-mode 1)
-  :bind-keymap
-  (("C-c p" . projectile-command-map))
-  :straight t)
-
-(use-package ivy-rich
+(use-package consult
+  :defer 0
   :init
-  (ivy-rich-mode 1)
+  (setq consult-ripgrep-args "rg --color never --glob !.git/ --hidden --line-buffered --line-number --max-columns 1000 --no-heading --smart-case --null .")
+  :config
+  (defalias 'rg 'consult-ripgrep)
   :straight t)
 
 (use-package magit
+  :defer 0
   :straight t)
 
 (use-package diff-hl
+  :defer 0
   :config
   (global-diff-hl-mode)
   (diff-hl-flydiff-mode)
   (diff-hl-margin-mode)
   :straight t)
 
-(use-package flycheck
-  :init
-  (global-flycheck-mode)
-  :straight t)
-
-(use-package company
+(use-package eglot
+  :defer 0
   :config
-  (global-company-mode)
-  :straight t)
-
-(use-package lsp-ivy
-  :commands
-  (lsp-ivy-workspace-symbol)
-  :straight t)
-
-(use-package lsp-pyright
+  ;; workaround for installing elixir_ls via Nix
+  (add-to-list 'eglot-server-programs '(elixir-mode . ("elixir-ls")))
   :hook
-  (python-mode . (lambda () (require 'lsp-pyright) (lsp-deferred)))
+  (prog-mode . eglot-ensure)
   :straight t)
 
 (use-package format-all
+  :defer 0
   :hook
   (prog-mode . format-all-mode)
+  (text-mode . format-all-mode)
   (format-all-mode . format-all-ensure-formatter)
   :straight t)
 
-(use-package docker
-  :bind
-  ("C-c d" . docker)
-  :straight t)
-
-(use-package typescript-mode
+(use-package flycheck
+  :defer 0
   :config
-  (add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
+  (flycheck-mode 1)
+  (flycheck-add-mode 'javascript-eslint 'web-mode)
+  (flycheck-add-mode 'typescript-tslint 'web-mode)
   :straight t)
 
-(use-package web-mode
-  :hook
-  (typescript-mode . web-mode)
-  :straight t)
+;; major modes for various languages
+(load "~/.emacs.d/lang.el")
+
+(add-hook 'emacs-startup-hook
+	  (lambda ()
+	    (message "Init time: %s"
+		     (format "%.2fs" (float-time (time-subtract
+						  after-init-time
+						  before-init-time))))))
