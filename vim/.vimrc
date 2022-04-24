@@ -6,16 +6,15 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
 endif
 call plug#begin()
+Plug 'takac/vim-hardtime'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
-Plug 'chriskempson/base16-vim'
+Plug 'embear/vim-localvimrc'
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
-Plug 'dart-lang/dart-vim-plugin'
-Plug 'natebosch/vim-lsc'
-Plug 'natebosch/vim-lsc-dart'
 call plug#end()
 
 " Behavior
@@ -23,7 +22,6 @@ set autoread
 set lazyredraw
 set mouse=a
 set updatetime=200
-set visualbell
 
 " Display
 set number
@@ -49,23 +47,12 @@ set nohlsearch
 set smartcase
 
 " Style
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-  " Hotfix spell highlight: https://github.com/chriskempson/base16-vim/issues/182
-  call Base16hi("SpellBad",   "", "", g:base16_cterm08, g:base16_cterm00, "", "")
-  call Base16hi("SpellCap",   "", "", g:base16_cterm0A, g:base16_cterm00, "", "")
-  call Base16hi("SpellLocal", "", "", g:base16_cterm0D, g:base16_cterm00, "", "")
-  call Base16hi("SpellRare",  "", "", g:base16_cterm0B, g:base16_cterm00, "", "")
-endif
+highlight! link SignColumn LineNr
+" See airblade/vim-gitgutter#696 for above workaround
 
 " Key maps
 nnoremap gb :Git blame<CR>
-nnoremap gd :LSClientGoToDefinition<CR>
-nnoremap <C-j> :ALEGoToDefinition<CR>
-
-" Fuzzy finder
-set rtp+=~/.fzf
+nnoremap gd :ALEGoToDefinition<CR>
 
 " ALE
 set omnifunc=ale#completion#OmniFunc
@@ -84,14 +71,15 @@ let g:ale_fixers = {
 \   'less': ['prettier'],
 \   'markdown': ['prettier'],
 \   'python': ['black'],
-\   'ruby': ['prettier'],
 \   'rust': ['rustfmt'],
+\   'ruby': ['rubocop'],
 \   'scss': ['prettier'],
 \   'sh': ['shfmt'],
 \   'typescript': ['prettier'],
 \   'typescriptreact': ['prettier'],
 \}
 let g:ale_linters = {
+\   'dart': ['dart_analyze'],
 \   'go': ['gopls'],
 \   'javascript': ['eslint', 'tsserver'],
 \   'javascriptreact': ['eslint', 'tsserver'],
@@ -101,11 +89,8 @@ let g:ale_linters = {
 let g:ale_linter_aliases = {
 \   'typescriptreact': 'typescript'
 \}
-let g:ale_dart_format_options = '--line-length=120'
-
-" indentLine
 let g:indentLine_defaultGroup = 'NonText'
 let g:indentLine_enabled = 0
 
-" LSC
-" let g:lsc_enable_autocomplete = v:false
+" Vim HardTime
+let g:hardtime_default_on = 0
