@@ -1,0 +1,19 @@
+{
+  "breadcrumbs.enabled": false,
+  "customizeUI.activityBar": "top",
+  "customizeUI.activityBarHideSettings": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.minimap.enabled": false,
+  "search.searchEditor.defaultNumberOfContextLines": 0,
+  "workbench.startupEditor": "none",
+  "window.titleBarStyle": "custom",
+  "window.enableMenuBarMnemonics": false,
+  "dart.lineLength": 120,
+  "editor.formatOnSave": true,
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code"
+  },
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.iconTheme": null,
+  "workbench.editor.tabCloseButton": "off"
+}
