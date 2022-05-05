@@ -1,3 +1,7 @@
+(use-package csharp-mode
+  :defer 0
+  :straight t)
+
 (use-package elixir-mode
   :defer 0
   :straight t)
@@ -30,11 +34,17 @@
   :defer 0
   :straight t)
 
+(use-package slime
+  :defer 0
+  :init
+  (setq inferior-lisp-program "sbcl")
+  :straight t)
+
 (use-package tide
   :defer 0
   :hook ((js-mode . (lambda () (tide-setup)))
-	 (typescript-mode . (lambda () (tide-setup)))
-	 (web-mode . (lambda () (tide-setup))))
+         (typescript-mode . (lambda () (tide-setup)))
+         (web-mode . (lambda () (tide-setup))))
   :straight t)
 
 (use-package web-mode
