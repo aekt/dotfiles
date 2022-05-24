@@ -55,6 +55,18 @@ highlight! link SignColumn LineNr
 nnoremap gb :Git blame<CR>
 nnoremap gd :ALEGoToDefinition<CR>
 
+" Netrw
+nnoremap <C-x><C-j> :Explore<CR>
+function! NetrwMapping()
+  nmap <buffer> h -^
+  nmap <buffer> l <CR>
+endfunction
+
+augroup netrw_mapping
+  autocmd!
+  autocmd filetype netrw call NetrwMapping()
+augroup END
+
 " ALE
 set omnifunc=ale#completion#OmniFunc
 let g:ale_fix_on_save = 1
