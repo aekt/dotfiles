@@ -11,8 +11,6 @@
   defaultBranch = main
 
 [alias]
-  hist = log --all --graph --oneline
-  amend = commit --all --amend
   save = ! git add --all && git commit --message 'SAVEPOINT'
   undo = reset HEAD~1 --mixed
   bye-list = \
