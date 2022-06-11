@@ -40,14 +40,7 @@
   (setq inferior-lisp-program "sbcl")
   :straight t)
 
-(use-package tide
+(use-package typescript-mode
   :defer 0
-  :hook ((js-mode . (lambda () (tide-setup)))
-         (typescript-mode . (lambda () (tide-setup)))
-         (web-mode . (lambda () (tide-setup))))
-  :straight t)
-
-(use-package web-mode
-  :mode ("\\.jsx\\'"
-         "\\.tsx\\'")
+  :mode ("\\.tsx\\'")
   :straight t)
