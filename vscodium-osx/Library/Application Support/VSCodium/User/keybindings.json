@@ -1,15 +1,102 @@
-// Place your key bindings in this file to override the defaultsauto[]
 [
+  {
+    "key": "alt+x",
+    "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "alt+p",
+    "command": "workbench.action.quickOpen"
+  },
   {
     "key": "alt+t",
     "command": "workbench.action.createTerminalEditor"
   },
   {
-    "key": "alt+o",
-    "command": "workbench.action.quickOpen"
+    "key": "alt+y",
+    "command": "browse-lite.open"
   },
   {
-    "key": "alt+p",
-    "command": "workbench.action.showCommands"
+    "key": "alt+b alt+b",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "alt+j alt+j",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "alt+j alt+m",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "alt+s",
+    "command": "search.action.openNewEditor"
+  },
+  {
+    "key": "alt+b h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "alt+b j",
+    "command": "workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "alt+b k",
+    "command": "workbench.action.focusAboveGroup"
+  },
+  {
+    "key": "alt+b l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "alt+b ctrl+h",
+    "command": "workbench.action.splitEditorLeft"
+  },
+  {
+    "key": "alt+b ctrl+j",
+    "command": "workbench.action.splitEditorDown"
+  },
+  {
+    "key": "alt+b ctrl+k",
+    "command": "workbench.action.splitEditorUp"
+  },
+  {
+    "key": "alt+b ctrl+l",
+    "command": "workbench.action.splitEditorRight"
+  },
+  {
+    "key": "alt+b shift-h",
+    "command": "workbench.action.moveActiveEditorGroupLeft"
+  },
+  {
+    "key": "alt+b shift-j",
+    "command": "workbench.action.moveActiveEditorGroupDown"
+  },
+  {
+    "key": "alt+b shift-k",
+    "command": "workbench.action.moveActiveEditorGroupUp"
+  },
+  {
+    "key": "alt+b shift-l",
+    "command": "workbench.action.moveActiveEditorGroupRight"
+  },
+  {
+    "key": "alt+b alt-h",
+    "command": "workbench.action.newGroupLeft"
+  },
+  {
+    "key": "alt+b alt-j",
+    "command": "workbench.action.newGroupBelow"
+  },
+  {
+    "key": "alt+b alt-k",
+    "command": "workbench.action.newGroupAbove"
+  },
+  {
+    "key": "alt+b alt-l",
+    "command": "workbench.action.newGroupRight"
+  },
+  {
+    "key": "alt+b q",
+    "command": "workbench.action.closeEditorsAndGroup"
   }
 ]

@@ -1,19 +1,18 @@
 {
   "breadcrumbs.enabled": false,
+  "csharp.referencesCodeLens.enabled": false,
+  "dart.lineLength": 120,
   "customizeUI.activityBar": "top",
   "customizeUI.activityBarHideSettings": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "search.searchEditor.defaultNumberOfContextLines": 0,
-  "workbench.startupEditor": "none",
-  "window.titleBarStyle": "custom",
+  "terminal.integrated.scrollback": 10000,
   "window.enableMenuBarMnemonics": false,
-  "dart.lineLength": 120,
-  "editor.formatOnSave": true,
-  "[dart]": {
-    "editor.defaultFormatter": "Dart-Code.dart-code"
-  },
+  "window.titleBarStyle": "custom",
+  "workbench.editor.tabCloseButton": "off",
   "workbench.editor.tabSizing": "shrink",
   "workbench.iconTheme": null,
-  "workbench.editor.tabCloseButton": "off"
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "GitHub Light Default"
 }
