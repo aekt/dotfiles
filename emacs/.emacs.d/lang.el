@@ -1,5 +1,7 @@
 (use-package csharp-mode
   :defer 0
+  :hook
+  (before-save . eglot-format-buffer)
   :straight t)
 
 (use-package elixir-mode
