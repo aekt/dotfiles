@@ -15,5 +15,11 @@
   "workbench.editor.tabCloseButton": "off",
   "workbench.editor.tabSizing": "shrink",
   "workbench.iconTheme": null,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "razor.format.enable": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.currentLine.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.hovers.enabled": false,
+  "gitlens.statusBar.enabled": false
 }
