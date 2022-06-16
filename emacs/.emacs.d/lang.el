@@ -1,7 +1,5 @@
 (use-package csharp-mode
   :defer 0
-  :hook
-  (before-save . eglot-format-buffer)
   :straight t)
 
 (use-package elixir-mode
@@ -42,7 +40,15 @@
   (setq inferior-lisp-program "sbcl")
   :straight t)
 
-(use-package typescript-mode
+(use-package tide
   :defer 0
-  :mode ("\\.tsx\\'")
+  :hook ((js-mode . (lambda () (tide-setup)))
+         (typescript-mode . (lambda () (tide-setup)))
+         (web-mode . (lambda () (tide-setup))))
+  :straight t)
+
+(use-package web-mode
+  :defer 0
+  :mode ("\\.jsx\\'"
+         "\\.tsx\\'")
   :straight t)
