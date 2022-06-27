@@ -30,6 +30,10 @@
   :defer 0
   :straight t)
 
+(use-package racket-mode
+  :defer 0
+  :straight t)
+
 (use-package rust-mode
   :defer 0
   :straight t)
