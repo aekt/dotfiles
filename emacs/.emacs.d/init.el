@@ -147,5 +147,6 @@
 ;; major modes for various languages
 (load "~/.emacs.d/lang.el")
 (load "~/.emacs.d/util.el")
+(load "~/.emacs.d/adhoc.el")
 
 (add-hook 'emacs-startup-hook 'message-init-time)
