@@ -1,16 +1,4 @@
 {
-  "breadcrumbs.enabled": false,
-  "csharp.referencesCodeLens.enabled": false,
-  "dart.lineLength": 120,
-  "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
-  "razor.format.enable": false,
-  "terminal.integrated.scrollback": 10000,
-  "window.titleBarStyle": "custom",
-  "window.zoomLevel": -1,
-  "workbench.editor.showTabs": false,
-  "workbench.editor.tabCloseButton": "off",
-  "workbench.editor.tabSizing": "shrink",
-  "workbench.iconTheme": null,
-  "workbench.startupEditor": "none"
+  "workbench.editor.showTabs": false
 }
